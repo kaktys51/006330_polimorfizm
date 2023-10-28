@@ -60,7 +60,11 @@ protected:
 public:
 	IPAddressChecked() {}
 	IPAddressChecked(std::string newIP) :
-		IPAddress(newIP) {}
+		IPAddress(newIP) 
+	{
+		convetedIP.clear();
+		inputConvert();
+	}
 	IPAddressChecked(const IPAddressChecked& obj) : IPAddress(obj.strIP) {}
 	
 	void inputConvert()								//та же функция конвертации но с проверками на корректность IP
@@ -109,17 +113,17 @@ public:
 
 int main()
 {
-	IPAddress ip0("111.999.12.1");
-	ip0.printIP();
-	cout << endl;
+	//IPAddress ip0("111.999.12.1");
+	//ip0.printIP();
+	//cout << endl;
 
 	IPAddressChecked ip_1("125.195.1.1");
 	ip_1.printIP();
 	cout << endl;
 
-	IPAddressChecked ip_2;
-	ip_2.setIP();
-	ip_2.printIP();
+	//IPAddressChecked ip_2;
+	//ip_2.setIP();
+	//ip_2.printIP();
 
 
 	return 0;
